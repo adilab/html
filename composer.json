@@ -1,0 +1,24 @@
+{
+    "name": "adilab/html",
+    "description": "Adi HTML Tools for PHP",
+    "homepage": "https://github.com/adilab/html.git",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adrian Zurkiewicz",
+            "email": "adrian@adilab.net"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/adilab/html/issues"
+    },
+    "require": {
+        "adilab/core": "*",
+        "adilab/css": "*"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ]
+    }
+}
