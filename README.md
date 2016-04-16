@@ -16,7 +16,8 @@ $ composer require adilab/html
 
 Usage:
 -------------
-Usage of Tag class.
+Usage of Tag class. [Online demo.](http://adilab.net/projects/demo/html.php)
+
 ```php
 require('vendor/autoload.php');
 
@@ -26,7 +27,7 @@ $p = new Tag('p', 'Hello world');
 $p->addStyle('color: #ff0000')->addStyle('background-color', '#ccc');
 echo $p->render();
 ```
-Usage of complex HTML structure.
+Usage of complex HTML structure. [Online demo.](http://adilab.net/projects/demo/html.php)
 
 ```php
 require('vendor/autoload.php');
@@ -36,7 +37,7 @@ use Adi\Html\Strong;
 
 echo Div::create(Strong::create('Hello world'))->setStyle('color: #ff0000');
 ```
-Usage of Table class.
+Usage of Table class. [Online demo.](http://adilab.net/projects/demo/table.php)
 ```php
 require('vendor/autoload.php');
 use Adi\Html\Table\Table;
@@ -52,7 +53,7 @@ $data = array(
 echo Table::create($data);
 ```
 
-Usage of Table class - named columns.
+Usage of Table class - named columns. [Online demo.](http://adilab.net/projects/demo/table.php#named-columns)
 ```php
 require('vendor/autoload.php');
 use Adi\Html\Table\Table;
@@ -73,3 +74,8 @@ $table->setHeader('B', '[B]');
 $table->setHeader('C', Th::create('[C]')->addStyle('color', '#0000ff'));
 echo $table;
 ```
+
+Documentation
+----------
+
+[API documentacion](http://adilab.net/projects/api/namespace-Adi.Html.html)
