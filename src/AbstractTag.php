@@ -143,20 +143,28 @@ abstract class AbstractTag extends Object {
 	
 	
 	/**
-	 * Set CSS style value
+	 * Set CSS style value. All the earlier styles will be overridden.
 	 * 
 	 * @param string $css Css style string
+	 * @param string $value
 	 * @return self
 	 */
-	public function setStyle($css) {
+	public function setStyle($css, $value = NULL) {
 		
-		return $this->setAttribute('style', $css);
+		$style = new Css();
+		
+		if ($value)
+			$style->set($css, $value);
+		else
+			$style->set($css);
+		
+		return $this->setAttribute('style', $style->render());
 		
 	}	
 	
 	
 	/**
-	 * Get CSS style value
+	 * Get CSS style value.
 	 * 
 	 * @param string $css Css style string
 	 * @return string|NULL
@@ -169,7 +177,7 @@ abstract class AbstractTag extends Object {
 	
 	
 	/**
-	 * Add CSS style
+	 * Add CSS style.
 	 * 
 	 * @param string $css CSS property or CSS expression string
 	 * @param string $value CSS value

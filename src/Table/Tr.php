@@ -104,12 +104,13 @@ class Tr extends AbstractPairedArrayTag {
 	}
 
 	/**
-	 * Get CSS style value
+	 * Get CSS style value. All the earlier styles will be overridden.
 	 * 
 	 * @param string $css Css style string
-	 * @return string|NULL
+	 * @param string $value
+	 * @return self
 	 */
-	public function setStyle($css) {
+	public function setStyle($css, $value = NULL) {
 		return parent::setStyle($css);
 	}
 	

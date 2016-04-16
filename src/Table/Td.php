@@ -26,15 +26,6 @@ use Adi\Html\AbstractPairedStringTag;
  */
 class Td extends AbstractPairedStringTag {
 
-	/**
-	 * 
-	 * @return string
-	 */
-	public function getName() {
-		
-		return "td";
-	}
-
 
 
 }
