@@ -13,3 +13,25 @@ Install this library using composer:
 ```console
 $ composer require adilab/html
 ```
+
+Usage:
+-------------
+```php
+require('vendor/autoload.php');
+
+use Adi\Html\Tag;
+
+$p = new Tag('p', 'Hello world');
+$p->addStyle('color: #ff0000')->addStyle('background-color', '#ccc');
+echo $p->render();
+```
+
+
+```php
+require('vendor/autoload.php');
+
+use Adi\Html\Div;
+use Adi\Html\Strong;
+
+echo Div::create(Strong::create('Hello world'))->setStyle('color: #ff0000');
+```
