@@ -16,6 +16,7 @@ $ composer require adilab/html
 
 Usage:
 -------------
+Usage of Tag class
 ```php
 require('vendor/autoload.php');
 
@@ -25,7 +26,7 @@ $p = new Tag('p', 'Hello world');
 $p->addStyle('color: #ff0000')->addStyle('background-color', '#ccc');
 echo $p->render();
 ```
-
+Usage of complex HTML structure
 
 ```php
 require('vendor/autoload.php');
